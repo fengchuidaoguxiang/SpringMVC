@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/SpringMVC.iml" filepath="$PROJECT_DIR$/SpringMVC.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringMVC_hello_annotation/SpringMVC_hello_annotation.iml" filepath="$PROJECT_DIR$/SpringMVC_hello_annotation/SpringMVC_hello_annotation.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringMVC_hello_xml/SpringMVC_hello_xml.iml" filepath="$PROJECT_DIR$/SpringMVC_hello_xml/SpringMVC_hello_xml.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringMVC_request_response/SpringMVC_request_response.iml" filepath="$PROJECT_DIR$/SpringMVC_request_response/SpringMVC_request_response.iml" />
     </modules>
   </component>
 </project>
