@@ -11,7 +11,7 @@
        http://www.springframework.org/schema/mvc
        http://www.springframework.org/schema/mvc/spring-mvc.xsd
 ">
-    <context:component-scan base-package="response,request"/>
+    <context:component-scan base-package="response,request,json"/>
     <mvc:annotation-driven/>
     <!--<mvc:default-servlet-handler/>-->
     <mvc:resources mapping="/**" location="/"/>
