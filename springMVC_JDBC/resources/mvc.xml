@@ -11,21 +11,14 @@
        http://www.springframework.org/schema/mvc
        http://www.springframework.org/schema/mvc/spring-mvc.xsd
 ">
-    <context:component-scan base-package="response,request,json,date"/>
+    <context:component-scan base-package="com"/>
+    <!--处理静态资源-->
+    <mvc:default-servlet-handler/>
+    <!--<mvc:resources mapping="/**" location="/"/>-->
     <mvc:annotation-driven/>
-    <!--<mvc:default-servlet-handler/>-->
-    <mvc:resources mapping="/**" location="/"/>
-    <!--配置视图解析器-->
+    <!--视图解析器-->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/views/"/>
         <property name="suffix" value=".jsp"/>
     </bean>
-
-
-    <!--测试@AutoWired在方法上和属性上的区别-->
-    <bean id="aaa" class="test.A">
-    </bean>
-    <bean id="bbb" class="test.B">
-    </bean>
-
 </beans>
