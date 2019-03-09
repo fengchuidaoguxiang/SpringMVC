@@ -11,6 +11,13 @@
             <param-value>classpath:mvc.xml</param-value>
         </init-param>
         <load-on-startup>1</load-on-startup>
+        <!--文件上传的配置-->
+        <multipart-config>
+            <location>E:/temp</location>
+            <max-file-size>1048576</max-file-size>
+            <max-request-size>10485760</max-request-size>
+            <file-size-threshold>10240</file-size-threshold>
+        </multipart-config>
     </servlet>
     <servlet-mapping>
         <servlet-name>springDispatcherServlet</servlet-name>
@@ -33,4 +40,5 @@
         <filter-name>CharacterEncodingFilter</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
+
 </web-app>

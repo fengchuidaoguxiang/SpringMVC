@@ -72,7 +72,6 @@ public class EmployeeDaoImpl implements IEmployeeDao {
     public int update(Employee employee) {
         String sql = "update employee set id=?,username=?,password=?,age=?,hiredate=? where id=?";
         int result = this.jdbcTemplate.update(sql,
-                employee.getId(),
                 employee.getUsername(),
                 employee.getPassword(),
                 employee.getAge(),
@@ -86,5 +85,25 @@ public class EmployeeDaoImpl implements IEmployeeDao {
         String sql = "delete from employee where id=?";
         int result = this.jdbcTemplate.update(sql,id);
         return result;
+    }
+
+    @Override
+    public Employee checkLogin(String username, String password) {
+
+        String sql = "select id,username,password,age,hiredate from employee where username=? and password=?";
+        List<Employee> employees = this.jdbcTemplate.query(sql, new Object[]{username,password},
+                new RowMapper<Employee>() {
+            @Override
+            public Employee mapRow(ResultSet resultSet, int i) throws SQLException {
+                Employee employee = new Employee();
+                employee.setId(resultSet.getLong("id"));
+                employee.setUsername(resultSet.getString("username"));
+                employee.setPassword(resultSet.getString("password"));
+                employee.setAge(resultSet.getInt("age"));
+                employee.setHiredate(resultSet.getDate("hiredate"));
+                return employee;
+            }
+        });
+        return employees.size()== 0 ? null : employees.get(0);
     }
 }

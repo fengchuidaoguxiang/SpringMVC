@@ -4,6 +4,7 @@ import com.dao.IEmployeeDao;
 import com.dao.impl.EmployeeDaoImpl;
 import com.domain.Employee;
 import com.service.IEmployeeService;
+import com.util.UserContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -37,5 +38,15 @@ public class EmployeeServiceImpl implements IEmployeeService {
     @Override
     public int delete(long id) {
         return employeeDao.delete(id);
+    }
+
+    @Override
+    public void login(String username, String password) {
+        Employee currentEmployee = employeeDao.checkLogin(username, password);
+        if(currentEmployee == null){
+            throw new RuntimeException("账号或密码错误");
+        }
+        UserContext.setCurrentUser(currentEmployee);
+
     }
 }

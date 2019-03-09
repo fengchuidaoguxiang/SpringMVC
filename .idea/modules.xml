@@ -7,6 +7,8 @@
       <module fileurl="file://$PROJECT_DIR$/SpringMVC_hello_annotation/SpringMVC_hello_annotation.iml" filepath="$PROJECT_DIR$/SpringMVC_hello_annotation/SpringMVC_hello_annotation.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringMVC_hello_xml/SpringMVC_hello_xml.iml" filepath="$PROJECT_DIR$/SpringMVC_hello_xml/SpringMVC_hello_xml.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringMVC_request_response/SpringMVC_request_response.iml" filepath="$PROJECT_DIR$/SpringMVC_request_response/SpringMVC_request_response.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springMVC_JDBC/springMVC_JDBC.iml" filepath="$PROJECT_DIR$/springMVC_JDBC/springMVC_JDBC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springMVC_JDBC_javaconfig/springMVC_JDBC_javaconfig.iml" filepath="$PROJECT_DIR$/springMVC_JDBC_javaconfig/springMVC_JDBC_javaconfig.iml" />
     </modules>
   </component>
 </project>
